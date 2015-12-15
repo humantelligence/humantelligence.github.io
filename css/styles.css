@@ -1,0 +1,128 @@
+body{
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  bottom: 0px;
+  letter-spacing: -1px;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background: url('../img/agthia-logo.jpg') no-repeat top right;
+  background-size: 155px 60px;
+}
+figure{
+  margin-left: 40px;
+}
+.section{
+  margin:0px;
+  bottom:0px;
+  position: absolute;
+  left: 0;
+  height:100%;
+  display: none;
+  transition: left 1s;
+}
+.section h1{
+  color: white;
+  font-size: 4em;
+  margin: 50px 0px 30px 50px;
+}
+.section h2{
+  font-size: 2em;
+  margin:60px 0px 30px 40px;
+}
+.section p{
+  margin:20px 0px 0px 40px;
+  width:600px;
+  letter-spacing: 0;
+  font-size: 1em;
+  line-height: 1.2;
+  color: #555;
+  font-weight: normal;
+}
+.section .nav{
+  list-style:none;
+  margin:20px 0px 0px 0px;
+  padding-right: 40px;
+}
+.section .nav li{
+  padding: 24px 12px;
+  position: relative;
+  border-bottom: 2px dotted #555;
+}
+.section .nav li a{
+  font-size: 1.5em;
+  display: block;
+  color: #777;
+}
+.section .nav li a:hover{
+  color: #555;
+}
+.section .nav li .next {
+  display: block;
+  position: absolute;
+  right: 12px;
+  top: 38px;
+  width: 26px;
+  height: 26px;
+  margin-top: -13px;
+  background: #999 url(../img/chevron.png) no-repeat 13px 7px;
+  background-size: 11px auto;
+  background-position: 9px 5px;
+  text-indent: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  -webkit-border-radius: 19px;
+  border-radius: 19px;
+}
+.green{
+  background: url('../img/bg-agthia.jpg') no-repeat bottom right #97bf1f;
+  background-size: 35%;
+  z-index: 9999;
+}
+#to-do .nav li:first-child a{
+  color: #f49018 !important;
+}
+#to-do .nav li:nth-child(2) a{
+  color: #00892a !important;
+}
+#to-do .nav li:nth-child(3) a{
+  color: #c82605 !important;
+}
+#to-do .nav li:first-child .next{
+  background-color: #f49018 !important;
+}
+#to-do .nav li:nth-child(2) .next{
+  background-color: #00892a !important;
+}
+#to-do .nav li:nth-child(3) .next{
+  background-color: #c82605 !important;
+}
+.visible{
+  display: block;
+}
+.btn-back{
+  position: absolute;
+  left: 0;
+  top: 4px;
+  z-index: 999;
+  padding: 12px 70px;
+  font-size: 1.4em;
+  color: #555;
+}
+.btn-back:before{
+  content: " ";
+  display: block;
+  width: 0;
+  height: 0;
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+  border-right: 16px solid rgba(0,0,0,0.2);
+  position: absolute;
+  top: 32%;
+  margin-top: 0px;
+  left: 40px;
+}
+.btn-back:hover{
+  color: #000;
+}
