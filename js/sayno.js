@@ -62,6 +62,24 @@ function showInfo(data, tabletop) {
         $(itodo).appendTo($('.'+value.parent+' .nav'))
           .append(iatodo)
           .append(satodo)
+      }else if(value.type == 'text'){
+        var htitle = document.createElement('h2');
+          $(htitle).html(value.question);
+        var himg = document.createElement('img');
+          $(himg).css('width', '120px');
+          $(himg).attr('src', 'img/'+value.image+'.png');
+        var hfig = document.createElement('figure')
+          $(hfig).append(himg);
+        var htext = document.createElement('p');
+          $(htext).text(value.contents);
+        var hsec = document.createElement('div');
+          $(hsec).addClass('section')
+              .addClass(value.id)
+              .attr('id', value.id)
+              .html(htitle)
+              .append(hfig)
+              .append(htext)
+              .appendTo($('.content'))
       }
     }
   });
