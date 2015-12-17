@@ -133,6 +133,38 @@ function showInfo(data, tabletop) {
 
   });
 
+  //btn back behavior
+  $('.back-nav').on('click', '.btn-back', function(event){
+    
+    //set direction
+    var dir = 'left';
+    //get destination 
+    var dt = $(this).attr('href');
+    //get current left value of destination div
+    var cl = $(dt).css('left');
+    //get div to hide
+    var dh = $('.active-left').attr('id');
+    dh = '#'+dh;
+    //get div to move
+    var dm = $('.active-right').attr('id');
+    dm = '#'+dm;
+    //get div to record in back btn
+    var pi = $('.past-inactive').attr('id');
+    pi = '#'+pi;
+
+    $('.active-left').find('li').css('background-color', 'transparent');
+
+    showPanel(dt, 0, dir);
+
+    hidePanel(dm, ww, dir);
+
+    movePanel(dh, ww/2, dir);
+
+    rmvBackBtn();
+
+    event.preventDefault();
+  });
+
 }
 
 function showPanel(panel, loc, dir) {
@@ -212,40 +244,6 @@ $(document).ready(function() {
   init();
   //global width
   var ww = $(window).width();
-
-  //nav button
-  
-  //btn back behavior
-  $('.back-nav').on('click', '.btn-back', function(event){
-    
-    //set direction
-    var dir = 'left';
-    //get destination 
-    var dt = $(this).attr('href');
-    //get current left value of destination div
-    var cl = $(dt).css('left');
-    //get div to hide
-    var dh = $('.active-left').attr('id');
-    dh = '#'+dh;
-    //get div to move
-    var dm = $('.active-right').attr('id');
-    dm = '#'+dm;
-    //get div to record in back btn
-    var pi = $('.past-inactive').attr('id');
-    pi = '#'+pi;
-
-    $('.active-left').find('li').css('background-color', 'transparent');
-
-    showPanel(dt, 0, dir);
-
-    hidePanel(dm, ww, dir);
-
-    movePanel(dh, ww/2, dir);
-
-    rmvBackBtn();
-
-    event.preventDefault();
-  });
 
   
   //resize all the items according to the new browser size
