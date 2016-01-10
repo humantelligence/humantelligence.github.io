@@ -13,69 +13,69 @@ function showInfo(data, tabletop) {
   $('.content').prepend(home_left);
   $('.content').prepend('<div class="back-nav"></div>');
   $(data).each(function(index, value){
-    if(value.parent == 'home'){
+    if(value.item_parent == 'home'){
       var hhome = document.createElement('h2');
-      $(hhome).html(value.question);
+      $(hhome).html(value.item_txt);
       var uhome = document.createElement('ul');
       $(uhome).addClass('nav');
       var dhome = document.createElement('div');
       $(dhome).addClass('section')
-          .addClass(value.id)
+          .addClass(value.item_id)
           .addClass('active-right')
           .addClass('visible')
-          .attr('id', value.id)
+          .attr('id', value.item_id)
           .html(hhome)
           .append(uhome)
           .appendTo($('.content'))
-    }else if(value.parent == 'to-do'){
+    }else if(value.item_parent == 'to-do'){
       var itodo = document.createElement('li');
       var iatodo = document.createElement('a');
       var satodo = document.createElement('span');
       $(satodo).addClass('next');
-      $(iatodo).text(value.question)
+      $(iatodo).text(value.item_txt)
         .addClass('btn-a')
-        .attr('href', '#'+value.son)
+        .attr('href', '#'+value.item_child)
       $(itodo).appendTo($('.to-do .nav'))
         .append(iatodo)
         .append(satodo)
     }else{
-      if(value.type == 'question'){
+      if(value.item_type == 'question'){
         var hhome = document.createElement('h2');
-        $(hhome).html(value.question);
+        $(hhome).html(value.item_txt);
         var uhome = document.createElement('ul');
         $(uhome).addClass('nav');
         var dhome = document.createElement('div');
         $(dhome).addClass('section')
-            .addClass(value.id)
-            .attr('id', value.id)
+            .addClass(value.item_id)
+            .attr('id', value.item_id)
             .html(hhome)
             .append(uhome)
             .appendTo($('.content'))
-      }else if(value.type == 'list'){
+      }else if(value.item_type == 'list'){
         var itodo = document.createElement('li');
         var iatodo = document.createElement('a');
         var satodo = document.createElement('span');
         $(satodo).addClass('next');
-        $(iatodo).text(value.question)
+        $(iatodo).text(value.item_txt)
           .addClass('btn-a')
-          .attr('href', '#'+value.son)
-        $(itodo).appendTo($('.'+value.parent+' .nav'))
+          .attr('href', '#'+value.item_child)
+        $(itodo).appendTo($('.'+value.item_parent+' .nav'))
           .append(iatodo)
           .append(satodo)
-      }else if(value.type == 'text'){
+      }else if(value.item_type == 'text'){
         var htitle = document.createElement('h2');
-          $(htitle).html(value.question);
+          $(htitle).html(value.item_txt);
         var himg = document.createElement('img');
           $(himg).css('width', '120px');
-          $(himg).attr('src', 'img/'+value.image+'.png');
+          $(himg).attr('src', 'img/'+value.item_img+'.png');
         var hfig = document.createElement('figure')
           $(hfig).append(himg);
         var htext = document.createElement('p');
-          $(htext).text(value.contents);
+          $(htext).text(value.item_contents);
         var hsec = document.createElement('div');
           $(hsec).addClass('section')
-              .addClass(value.id)
-              .attr('id', value.id)
+              .addClass(value.item_id)
+              .attr('id', value.item_id)
               .html(htitle)
               .append(hfig)
               .append(htext)
