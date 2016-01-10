@@ -29,16 +29,19 @@ figure{
 }
 .section h2{
   font-size: 2em;
-  margin:60px 0px 30px 40px;
+  margin:60px 40px 30px 40px;
 }
 .section p{
-  margin:20px 0px 0px 40px;
+  margin:20px 40px 40px 40px;
   width:600px;
   letter-spacing: 0;
   font-size: 1em;
   line-height: 1.2;
   color: #555;
   font-weight: normal;
+  height: 60%;
+  white-space: pre-wrap;
+  overflow-y: scroll;
 }
 .section .nav{
   list-style:none;
