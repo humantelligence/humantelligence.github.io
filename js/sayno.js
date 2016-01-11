@@ -34,7 +34,7 @@ function showInfo(data, tabletop) {
       $(satodo).addClass('next');
       $(iatodo).text(value.item_txt)
         .addClass('btn-a')
-        .attr('href', '#'+value.item_child)
+        .attr('href', '#'+value.item_destination)
       $(itodo).appendTo($('.to-do .nav'))
         .append(iatodo)
         .append(satodo)
@@ -58,7 +58,7 @@ function showInfo(data, tabletop) {
         $(satodo).addClass('next');
         $(iatodo).text(value.item_txt)
           .addClass('btn-a')
-          .attr('href', '#'+value.item_child)
+          .attr('href', '#'+value.item_destination)
         $(itodo).appendTo($('.'+value.item_parent+' .nav'))
           .append(iatodo)
           .append(satodo)
