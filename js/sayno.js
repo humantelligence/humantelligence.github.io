@@ -230,15 +230,18 @@ function resizePanel() {
   //get the browser width and height
   ww = $(window).width();
   //height = $(window).height();
-
   //resize
   $('.section').css('width', ww/2);
-  var ts = $('.content').children('.section').length;
+  /*var ts = $('.content').children('.section').length;
   for(var i=0; i<ts; i++){
     $(".section").eq(i).css('left', (i*ww)/2);
-  }
+  }*/
+  $('.section').not('[class*="active-"]').css('left', ww*2);
+  $('.active-left').css('left', 0);
+  $('.active-right').css('left', ww/2);
 
 }
+
 $(document).ready(function() {
 
   init();
