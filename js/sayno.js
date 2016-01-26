@@ -71,6 +71,7 @@ function showInfo(data, tabletop) {
         var hfig = document.createElement('figure')
           $(hfig).append(himg);
         var htext = document.createElement('p');
+          $(htext).addClass('p-text');
           $(htext).text(value.item_contents);
         var hsec = document.createElement('div');
           $(hsec).addClass('section')
