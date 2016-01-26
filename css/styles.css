@@ -81,7 +81,7 @@ figure{
 }
 .green{
   background: url('../img/bg-agthia.jpg') no-repeat bottom right #97bf1f;
-  background-size: 35%;
+  background-size: 250px;
   z-index: 9999;
 }
 #to-do .nav li:first-child a{
