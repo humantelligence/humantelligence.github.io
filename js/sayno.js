@@ -7,8 +7,10 @@ function init() {
 }
 
 function showInfo(data, tabletop) {
+  $('.loading').remove();
   var home_left = '<div class="section green active-left visible" style=width:'+ww/2+'px id="home">';
   home_left += '<h1>Welcome to Agthia Code of Business Conduct ToolKit</h1>';
+  home_left += '<img src="img/bg-agthia.jpg" />';
   home_left += '</div>';
   $('.content').prepend(home_left);
   $('.content').prepend('<div class="back-nav"></div>');

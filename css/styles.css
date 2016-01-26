@@ -3,6 +3,7 @@ body{
   top: 0px;
   left: 0px;
   bottom: 0px;
+  width: 100%;
   letter-spacing: -1px;
   margin: 0;
   padding: 0;
@@ -12,6 +13,16 @@ body{
 }
 figure{
   margin-left: 40px;
+}
+.loading{
+  position: absolute;
+  width: 100%;
+  left: 0;
+  right: 0;
+  top: 15%;
+}
+.loading img{
+  width: 35%;
 }
 .section{
   margin:0px;
@@ -80,9 +91,16 @@ figure{
   border-radius: 19px;
 }
 .green{
-  background: url('../img/bg-agthia.jpg') no-repeat bottom right #97bf1f;
-  background-size: 250px;
+  background: #97bf1f;
   z-index: 9999;
+}
+.green img{
+  display: block;
+  width: 250px;
+  height: auto;
+  position: absolute;
+  right: 0;
+  bottom: 0;
 }
 #to-do .nav li:first-child a{
   color: #f49018 !important;
